@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import './App.css';
-
-const url = 'https://gutendex.com/books/?search=berlin';
+import { Books } from './components/Books';
+import { Employees } from './components/Employees';
 
 function App() {
-
-
 	return (
 		<div className="App">
 			<h1>TypeScript Examples</h1>
-			<h2>There are nnn books</h2>
+			<Books/>
+			<Employees/>
 		</div>
 	);
 }
