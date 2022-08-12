@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Books } from './components/Books';
 import { Employees } from './components/Employees';
 

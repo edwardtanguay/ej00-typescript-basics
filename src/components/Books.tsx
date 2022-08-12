@@ -9,12 +9,14 @@ interface IBook {
 export const Books = () => {
 	const [books, setBooks] = useState<IBook[]>([]);
 
-	const url = 'https://gutendex.com/books/?search=berlin';
+	const url = 'https://gutendex.com/books/?search=electrical';
 
 	const getAuthors = (rawAuthors:any) => {
 		const authors: string[] = [];
 		rawAuthors.forEach((rawAuthor:any) => {
-			const author:string = rawAuthor.name;
+			const parts = rawAuthor.name.split(',');
+			parts.reverse();
+			let author: string = parts.join(' ');
 			authors.push(author);
 		})
 		return authors;
